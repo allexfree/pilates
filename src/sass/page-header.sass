@@ -1,0 +1,127 @@
+@import "vars"
+
+.page-header
+  display: flex
+  flex-direction: column
+  position: relative
+  background-image: url("../img/header-bg@x1.jpg")
+  background-repeat: no-repeat
+  background-size: 170%
+  background-position: 81% 108%
+  overflow: hidden
+  box-sizing: border-box
+  &::after
+    +pseudo
+    top: 29%
+    left: 18%
+    width: 321px
+    height: 318px
+    background-image: url("../img/header-pseudo@x1.png")
+    background-repeat: no-repeat
+    background-size: cover
+
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+  .page-header
+    background-image: url("../img/header-bg@x2.jpg")
+    &::after
+      background-image: url("../img/header-pseudo@x2.png")
+
+@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx)
+  .page-header
+    background-image: url("../img/header-bg@x3.jpg")
+    &::after
+      background-image: url("../img/header-pseudo@x3.png")
+
+.main-menu
+  display: none
+
+.page-header__wrapper
+  padding: 10px 15px 0
+
+.page-header__topline
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.menu-burger
+  position: relative
+  display: block
+  width: 17px
+  height: 12px
+  padding: 0
+  border: none
+  background-color: $bgc
+  transform: translateY(-3px)
+  cursor: pointer
+  span
+    display: block
+    height: 2px
+    background-color: #ffffff
+    &::before,
+    &::after
+      +pseudo
+      height: 2px
+      background-color: #ffffff
+
+    &::before
+      width: 10px
+
+    &::after
+      top: 10px
+      width: 100%
+
+.page-header__topline-info
+  display: none
+
+.page-header__intro
+  display: flex
+
+.page-header__intro-block
+  display: flex
+  flex-direction: column
+  padding-top: 62px
+  padding-bottom: 211px
+
+.page-header__intro-title
+  margin-bottom: 23px
+  font-family: $font-two
+  font-weight: 300
+  font-size: 30px
+  line-height: 1.2
+  letter-spacing: 0.075em
+  text-transform: uppercase
+  span
+    display: block
+
+.page-header__intro-slogan
+  display: none
+
+.page-header__intro-link
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 156px
+  padding: 9px 0
+  font-size: 11px
+  color: #ffffff
+  text-decoration: none
+  border: 2px solid #ffffff
+  border-radius: 19.5px
+  transform: translateX(2px)
+  transition: all 0.2s
+  z-index: 5
+  box-sizing: border-box
+  &:hover,
+  &:focus
+    opacity: 0.8
+
+.nav__sidebar
+  display: none
+
+@media (min-width: 630px)
+  .menu-burger
+    span
+      background-color: #000000
+      &::before,
+      &::after
+        background-color: #000000
