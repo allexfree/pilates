@@ -18,9 +18,15 @@ $bgc: transparent
 
 //  Mixins
 
+=color-bg($r: 145, $g: 170, $b: 89, $alpha: 1)
+  background-color: rgba($r, $g, $b, $alpha)
+
+=color-font($r: 255, $g: 255, $b: 255, $alpha: 1)
+  color: rgba($r, $g, $b, $alpha)
+
 =pseudo($cnt: "", $pos: absolute, $top: 0, $left: 0, $disp: flex)
-    content: $cnt
-    position: $pos
-    top: $top
-    left: $left
-    display: $disp
+  content: $cnt
+  position: $pos
+  top: $top
+  left: $left
+  display: $disp

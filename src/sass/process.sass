@@ -1,0 +1,147 @@
+@import "vars"
+
+.process
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+
+.process__wrapper
+  position: relative
+  display: flex
+  flex-direction: column
+  padding: 0 15px 30px
+  overflow: hidden
+  box-sizing: border-box
+
+.process__title
+  position: relative
+  display: flex
+  padding-left: 26px
+  margin-top: 0
+  margin-bottom: 12px
+  font-family: $font-two
+  font-weight: 500
+  font-size: 18px
+  letter-spacing: -0.65px
+  line-height: 14px
+  color: #000000
+  box-sizing: border-box
+  &::before
+    +pseudo
+    top: 7px
+    width: 17px
+    height: 1px
+    background-color: #000000
+
+.process__content
+  display: flex
+  flex-direction: column
+
+.process__content-item
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  &::before
+    +pseudo
+    left: auto
+    right: auto
+    width: 203px
+    height: 256px
+    background-repeat: no-repeat
+    background-size: cover
+
+  &:first-child
+    &::before
+      top: 44px
+      background-image: url("../img/process-pseudo-1@x1.png")
+
+  &:nth-child(2)
+    h3
+      padding-bottom: 290px
+
+    &::before
+      top: -28px
+      width: 235px
+      height: 337px
+      background-image: url("../img/process-pseudo-2@x1.png")
+      transform: translateX(-5px)
+
+  &:nth-child(3)
+    h3
+      padding-bottom: 298px
+
+    p
+      margin-bottom: 62px
+
+    &::before
+      top: 83px
+      width: 259px
+      height: 226px
+      background-image: url("../img/process-pseudo-3@x1.png")
+      transform: translateX(-8px)
+
+  &:last-child
+    h3
+      padding-bottom: 300px
+
+    &::before
+      top: 88px
+      width: 327px
+      height: 226px
+      background-image: url("../img/process-pseudo-4@x1.png")
+      transform: translateX(4px)
+
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+  .process__content-item
+    &:first-child
+      &::before
+        background-image: url("../img/process-pseudo-1@x2.png")
+
+    &:nth-child(2)
+      &::before
+        background-image: url("../img/process-pseudo-2@x2.png")
+
+    &:nth-child(3)
+      &::before
+        background-image: url("../img/process-pseudo-3@x2.png")
+
+    &:last-child
+      &::before
+        background-image: url("../img/process-pseudo-4@x2.png")
+
+@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx)
+  .process__content-item
+    &:first-child
+      &::before
+        background-image: url("../img/process-pseudo-1@x3.png")
+
+    &:nth-child(2)
+      &::before
+        background-image: url("../img/process-pseudo-2@x3.png")
+
+    &:nth-child(3)
+      &::before
+        background-image: url("../img/process-pseudo-3@x3.png")
+
+    &:last-child
+      &::before
+        background-image: url("../img/process-pseudo-4@x3.png")
+
+.process__content-item-title
+  padding-right: 5px
+  padding-bottom: 270px
+  margin-bottom: 0
+  font-family: $font-two
+  font-weight: 400
+  font-size: 14px
+  color: rgba(36, 36, 36, 0.87)
+
+.process__content-item-text
+  display: flex
+  margin-top: 0
+  margin-bottom: 59px
+  color: #010101
+  letter-spacing: normal
+  line-height: 1.2
+  text-align: center

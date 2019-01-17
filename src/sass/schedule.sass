@@ -1,0 +1,159 @@
+@import "vars"
+
+.schedule
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+
+.schedule__wrapper
+  position: relative
+  display: flex
+  flex-direction: column
+  padding: 15px 15px 28px
+  overflow: hidden
+  box-sizing: border-box
+
+.schedule__title
+  position: relative
+  display: flex
+  padding-left: 26px
+  margin-top: 0
+  margin-bottom: 30px
+  font-family: $font-two
+  font-weight: 500
+  font-size: 18px
+  letter-spacing: -0.4px
+  line-height: 14px
+  color: #000000
+  &::before
+    +pseudo
+    top: 7px
+    width: 17px
+    height: 1px
+    background-color: #000000
+
+.schedule__content
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.schedule__content-item
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 244px
+  padding: 85px 24px 41px 47px
+  margin-bottom: 20px
+  border-radius: 4px
+  box-sizing: border-box
+  &::before
+    +pseudo
+    top: -9px
+    left: 7px
+    width: 100%
+    justify-content: center
+    font-family: $font-three
+    font-weight: 800
+    font-size: 115px
+    +color-font($alpha: 0.1)
+
+  &:first-child
+    +color-bg($alpha: 0.5)
+    &::before
+      content: "01"
+
+  dl
+    padding-right: 21px
+
+  &:nth-child(2)
+    padding-left: 42px
+    +color-bg($alpha: 0.7)
+    &::before
+      content: "02"
+      top: -9px
+      left: 13px
+
+  &:last-child
+    padding-left: 42px
+    +color-bg($alpha: 0.9)
+    &::before
+      content: "03"
+      top: -9px
+      left: 13px
+
+.schedule__content-item-head
+  padding-right: 23px
+  font-family: $font-two
+  font-weight: 500
+  color: #ffffff
+  letter-spacing: 0.1em
+  dt
+    margin-bottom: 10px
+    font-size: 12px
+    line-height: 1.2
+    text-transform: uppercase
+    span
+      display: block
+      font-size: 18px
+
+  dd
+    margin: 0
+    font-family: $font-one
+    font-size: 16px
+    font-weight: 700
+    letter-spacing: -0.1px
+
+.schedule__content-item-main
+  align-self: flex-start
+  margin-bottom: 17px
+  font-weight: 500
+  line-height: 23px
+  color: #ffffff
+  tr
+    display: flex
+    margin-bottom: 9px
+
+  td
+    font-weight: 500
+    font-size: 16px
+    letter-spacing: -0.6px
+    line-height: 23px
+    padding: 0
+
+.schedule__content-item-btn
+  position: relative
+  display: block
+  width: 130px
+  padding: 0
+  padding: 5px 0
+  border: 2px solid #ffffff
+  border-radius: 15px
+  color: #ffffff
+  background-color: $bgc
+  cursor: pointer
+  transform: translateX(-22px)
+  transition: all 0.2s
+  &:hover,
+  &:focus
+    opacity: 0.8
+
+  &::after
+    +pseudo
+    top: 7px
+    left: 113px
+    width: 35px
+    height: 12px
+    background-image: url("../img/long-right-arrow.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: right center
+
+@media (min-width: 540px)
+  .schedule__content
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+
+  .schedule__content-item
+    margin-right: 20px

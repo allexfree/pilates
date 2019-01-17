@@ -1,0 +1,84 @@
+@import "vars"
+
+.about
+  position: relative
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+
+.about__wrapper
+  position: relative
+  display: flex
+  flex-direction: column
+  padding: 46px 15px 200px
+  overflow: hidden
+  box-sizing: border-box
+  &::after
+    content: ""
+    position: absolute
+    display: flex
+    bottom: 32px
+    right: 15px
+    width: 281px
+    height: 198px
+    background-image: url("../img/about-img@x1.png")
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: -1
+
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+  .about__wrapper
+    &::after
+      background-image: url("../img/about-img@x2.png")
+
+@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx)
+  .about__wrapper
+    &::after
+      background-image: url("../img/about-img@x3.png")
+
+.about__title
+  position: relative
+  display: flex
+  padding-left: 26px
+  margin-top: 0
+  margin-bottom: 29px
+  font-family: $font-two
+  font-weight: 500
+  font-size: 18px
+  letter-spacing: -0.3px
+  line-height: 14px
+  color: #000000
+  &::before
+    +pseudo
+    top: 7px
+    width: 17px
+    height: 1px
+    background-color: #000000
+
+.about__text
+  display: flex
+  width: 100%
+  margin-bottom: 0
+  line-height: 1.2
+  letter-spacing: -0.2px
+  color: #000000
+  &:last-of-type
+    margin-bottom: 24px
+
+.about__link
+  display: flex
+  flex-wrap: wrap
+  width: 107px
+  letter-spacing: -0.1px
+  color: #2a4f37
+  text-decoration: none
+  text-transform: uppercase
+  background-image: url("../img/right-arrow.svg")
+  background-repeat: no-repeat
+  background-size: 12px
+  background-position: right center
+  z-index: 5
+  transition: all 0.2s
+  &:hover,
+  &:focus
+    opacity: 0.8
