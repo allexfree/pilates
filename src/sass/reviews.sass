@@ -1,0 +1,152 @@
+@import "vars"
+
+.reviews
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+
+/*.reviews__wrapper
+  position: relative
+  display: flex
+  flex-direction: column
+  padding: 0 15px 30px
+  overflow: hidden
+  box-sizing: border-box*/
+
+.reviews__title
+  position: relative
+  display: flex
+  padding-left: 41px
+  margin-top: 0
+  margin-bottom: 23px
+  font-family: $font-two
+  font-weight: 500
+  font-size: 18px
+  letter-spacing: -0.65px
+  line-height: 14px
+  color: #000000
+  box-sizing: border-box
+  &::before
+    +pseudo
+    top: 8px
+    left: 15px
+    width: 17px
+    height: 1px
+    background-color: #000000
+
+.reviews__slider
+  .slick-track
+    padding-top: 10px;
+    padding-bottom: 30px
+
+.reviews__slide
+  display: flex
+  flex-direction: column
+  width: 290px
+  height: 323px
+  margin-right: 15px
+  padding: 40px 14px 15px
+  background-color: #ffffff
+  border-radius: 4px
+  box-shadow: 0px 9px 22.7px 9.3px rgba(33, 33, 33, 0.04)
+  overflow: hidden
+  box-sizing: border-box
+
+.reviews__slide-header
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-bottom: 21px
+
+.reviews__slide-header-topline
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-right: 12px
+
+.reviews__slide-title
+  margin-top: 14px
+  margin-bottom: 6px
+  font-family: $font-two
+  font-size: 16px
+  line-height: normal
+  letter-spacing: normal
+  +color-font(0, 0, 0, 0.87)
+
+.reviews__slide-img
+  order: -1
+
+.reviews__slide-header-bottomline
+  display: flex
+  align-items: center
+  width: 100%
+  padding: 0 65px
+  box-sizing: border-box
+  p
+    margin-top: 0
+    margin-bottom: 0
+    margin-right: 26px
+    font-family: $font-two
+    line-height: normal
+    letter-spacing: normal
+    +color-font(0, 0, 0, 0.87)
+
+.reviews__slide-header-social
+  display: flex
+
+.reviews__slide-header-link
+  display: block
+  width: 20px
+  height: 15px
+  background-repeat: no-repeat
+  &:first-child
+    margin-right: 18px
+    background-image: url('../img/vk-icon.svg')
+    background-size: cover
+    background-position: center
+
+  &:last-child
+    background-image: url('../img/instagram-icon.svg')
+
+
+.reviews__slide-content
+  margin-top: 0
+  margin-bottom: 0
+  font-weight: 300
+  line-height: 1.25
+  letter-spacing: normal
+  color: #000000
+  text-align: center
+
+.reviews__slider-pagination
+  position: absolute
+  bottom: -1px
+  left: auto
+  right: auto
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  padding: 0
+  font-size: 0
+  list-style: none
+  li
+    &:last-child
+      button
+        margin-right: 0
+
+    button
+      display: block
+      margin-right: 12px
+      padding: 3px
+      border: none
+      border-radius: 50%
+      outline: none
+      +color-bg(145, 170, 89, 0.5)
+
+      cursor: pointer
+      box-sizing: border-box
+
+  .slick-active
+    button
+      box-shadow: 0 0 0 2px rgba(145, 170, 89, 0.5)

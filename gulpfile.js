@@ -65,8 +65,7 @@ gulp.task('cssLibsMin', function() {
 
 gulp.task('jsLibsMin', function() {
   return gulp.src([
-    'src/libs/jquery/jquery-3.3.1.js',
-    'src/libs/slick-1.8.1/slick/slick.js'
+    'src/libs/**/**/*.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
