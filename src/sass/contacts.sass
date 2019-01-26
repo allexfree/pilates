@@ -1,0 +1,93 @@
+@import "vars"
+
+.contacts
+  display: flex
+  flex-direction: column
+  padding: 39px 0 0
+  box-sizing: border-box
+
+.contacts__title
+  position: relative
+  display: flex
+  padding-left: 40px
+  margin-top: 0
+  margin-bottom: 9px
+  font-family: $font-two
+  font-weight: 500
+  font-size: 18px
+  letter-spacing: -0.4px
+  line-height: 14px
+  +color-font(0, 0, 0, 0.87)
+  &::before
+    +pseudo
+    top: 7px
+    left: 15px
+    width: 17px
+    height: 1px
+    background-color: #000000
+
+.contacts__content
+  display: flex
+  flex-direction: column
+
+.contacts__info
+  display: flex
+  flex-direction: column
+  margin-bottom: 49px
+  padding: 0 36px
+  +color-font(0, 0, 0, 0.87)
+
+.contacts__info-address
+  display: flex
+  flex-direction: column
+  margin-bottom: 20px
+  span
+    font-weight: 300
+    line-height: normal
+
+.contacts__info-phone
+  margin-bottom: 11px
+
+.contacts__info-address-title,
+.contacts__info-phone-tile,
+.contacts__info-mail-tile
+  margin-bottom: 7px
+  font-weight: 500
+  font-size: 16px
+  line-height: 22.61px
+
+.contacts__info-phone-tile
+  margin-top: 0
+  margin-bottom: 2px
+
+.contacts__info-mail-tile
+  margin-top: 0
+  margin-bottom: 0
+
+.contacts__info-phone-link,
+.contacts__info-mail-link
+  +color-font(0, 0, 0, 0.87)
+
+.contacts__info-phone-link
+  letter-spacing: -0.4px
+  text-decoration: none
+
+.contacts__info-mail-link
+  letter-spacing: -0.4px
+
+.contacts__map
+  display: flex
+  width: 100%
+  height: 272px
+  background-image: url("../img/map@x1.png")
+  background-repeat: no-repeat
+  background-position: 50% center
+  background-size: cover
+
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+  .contacts__map
+    background-image: url("../img/map@x2.png")
+
+@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx)
+  .contacts__map
+    background-image: url("../img/map@x3.png")
