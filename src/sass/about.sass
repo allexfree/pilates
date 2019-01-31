@@ -26,12 +26,12 @@
     background-size: cover
     z-index: -1
 
-@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
++pixel-ratio(double)
   .about__wrapper
     &::after
       background-image: url("../img/about-img@x2.png")
 
-@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx)
++pixel-ratio(triple)
   .about__wrapper
     &::after
       background-image: url("../img/about-img@x3.png")
@@ -58,10 +58,12 @@
 .about__text
   display: flex
   width: 100%
+  padding-right: 2px
   margin-bottom: 0
   line-height: 1.2
-  letter-spacing: -0.2px
+  letter-spacing: 0px
   color: #000000
+  box-sizing: border-box
   &:last-of-type
     margin-bottom: 24px
 
@@ -69,6 +71,7 @@
   display: flex
   flex-wrap: wrap
   width: 107px
+  font-weight: 500
   letter-spacing: -0.1px
   color: #2a4f37
   text-decoration: none
@@ -82,3 +85,51 @@
   &:hover,
   &:focus
     opacity: 0.8
+
++respond-to(tablet)
+  .about__wrapper
+    padding: 65px 62px 147px
+    &::after
+      bottom: 34px
+      right: 64px
+      width: 417px
+      height: 307px
+      background-image: url("../img/about-img-tablet@1x.png")
+
+  +pixel-ratio(double)
+    .about__wrapper
+      &::after
+        background-image: url("../img/about-img-tablet@2x.png")
+
+  +pixel-ratio(triple)
+    .about__wrapper
+      &::after
+        background-image: url("../img/about-img-tablet@3x.png")
+
+  .about__block
+    padding-right: 326px
+
+  .about__title
+    padding-left: 55px
+    margin-bottom: 38px
+    font-size: 24.43px
+    line-height: 30.52px
+    +color-font(0, 0, 0, 0.87)
+    &::before
+      top: 14px
+      width: 37px
+      height: 2px
+
+  .about__text
+    padding-left: 1px
+    padding-right: 0
+    margin-bottom: 21px
+    font-size: 15.97px
+    letter-spacing: 0px
+    &:last-of-type
+      margin-bottom: 43px
+
+  .about__link
+    padding-right: 16px
+    font-size: 14.01px
+    letter-spacing: 1.8px

@@ -11,11 +11,13 @@
   flex-direction: column
   justify-content: center
   align-items: center
+  padding: 38px 0 8px
 
 .page-footer__social
   display: flex
-  align-items: center
+  align-items: flex-end
   flex-wrap: wrap
+  margin-bottom: 37px
 
 .page-footer__social-link
   display: block
@@ -23,15 +25,28 @@
   background-size: cover
   &:first-child
     width: 20px
-    height: 11px
-    background-image: url("../img/vk-icon.svg")
+    height: 15px
+    background-image: url("../img/vk-icon-white.svg")
 
   &:nth-child(2)
-    width: 8px
+    width: 11px
     height: 15px
-    background-image: url("../img/fb-icon.svg")
+    margin: 0 14px
+    background-image: url("../img/fb-icon-white.svg")
 
   &:last-child
     width: 13px
     height: 13px
-    background-image: url("../img/instagram-icon.svg")
+    background-image: url("../img/instagram-icon-white.svg")
+
+.page-footer__copyright
+  margin: 0
+  padding-right: 7px
+  font-weight: 300
+  font-size: 10px
+  line-height: 19.94px
+  letter-spacing: 0.1em
+  color: #ffffff
+  span
+    font-size: 12px
+    line-height: 24px

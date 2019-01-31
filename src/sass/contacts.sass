@@ -33,7 +33,7 @@
 .contacts__info
   display: flex
   flex-direction: column
-  margin-bottom: 49px
+  margin-bottom: 47px
   padding: 0 36px
   +color-font(0, 0, 0, 0.87)
 
@@ -84,10 +84,10 @@
   background-position: 50% center
   background-size: cover
 
-@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
++pixel-ratio(double)
   .contacts__map
     background-image: url("../img/map@x2.png")
 
-@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx)
++pixel-ratio(triple)
   .contacts__map
     background-image: url("../img/map@x3.png")

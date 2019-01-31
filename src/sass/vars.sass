@@ -11,7 +11,23 @@ $font-four: "OpenSans", Arial, Helvetica, sans-serif
 $margin: 0 auto
 
 
-//colors
+//  break-points
+
+$sm: 764px
+$lg: 1366px
+
+
+// retina
+
+$double-dpr: 1.5
+$double-dpi: 144dpi
+$double-dpx: 1.5dppx
+$triple-dpr: 3
+$triple-dpi: 288dpi
+$triple-dpx: 3dppx
+
+
+//  colors
 
 $bgc: transparent
 
@@ -30,3 +46,21 @@ $bgc: transparent
   top: $top
   left: $left
   display: $disp
+
+=respond-to($media)
+  @if $media == 'tablet'
+    @media (min-width: $sm)
+      @content
+
+  @else if $media == 'desktop'
+    @media (min-width: $lg)
+      @content
+
+=pixel-ratio($media)
+  @if $media == 'double'
+    @media (min-device-pixel-ratio: $double-dpr), (min-resolution: $double-dpi), (min-resolution: $double-dpx)
+      @content
+
+  @else if $media == 'triple'
+    @media (min-device-pixel-ratio: $triple-dpr), (min-resolution: $triple-dpi), (min-resolution: $triple-dpx)
+      @content

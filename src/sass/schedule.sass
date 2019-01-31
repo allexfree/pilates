@@ -157,3 +157,31 @@
 
   .schedule__content-item
     margin-right: 20px
+
++respond-to(tablet)
+  .schedule__wrapper
+    padding: 49px 62px 0
+
+  .schedule__title
+    padding-left: 53px
+    margin-bottom: 44px
+    font-size: 24.43px
+    line-height: 30.52px
+    letter-spacing: -0.2px
+    +color-font(0, 0, 0, 0.87)
+    &::before
+      top: 15px
+      width: 37px
+      height: 2px
+
+  .schedule__content-item
+    width: 206px
+    min-height: 371px
+    padding: 85px 7px 20px 28px
+    margin-right: 11px
+    &:nth-child(2)
+      padding-left: 25px
+
+    &:last-child
+      padding-left: 24px
+      margin-right: 0

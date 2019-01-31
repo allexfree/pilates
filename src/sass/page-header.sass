@@ -4,7 +4,7 @@
   display: flex
   flex-direction: column
   position: relative
-  background-image: url("../img/header-bg@x1.jpg")
+  background-image: url("../img/header-bg@x3.jpg")
   background-repeat: no-repeat
   background-size: 170%
   background-position: 81% 108%
@@ -20,15 +20,13 @@
     background-repeat: no-repeat
     background-size: cover
 
-@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
++pixel-ratio(double)
   .page-header
-    background-image: url("../img/header-bg@x2.jpg")
     &::after
       background-image: url("../img/header-pseudo@x2.png")
 
-@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx)
++pixel-ratio(triple)
   .page-header
-    background-image: url("../img/header-bg@x3.jpg")
     &::after
       background-image: url("../img/header-pseudo@x3.png")
 
@@ -42,6 +40,10 @@
   display: flex
   justify-content: space-between
   align-items: center
+
+.logo__img--tablet,
+.logo__img--desktop
+  display: none
 
 .menu-burger
   position: relative
@@ -81,6 +83,7 @@
   flex-direction: column
   padding-top: 62px
   padding-bottom: 211px
+  z-index: 1
 
 .page-header__intro-title
   margin-bottom: 23px
@@ -110,7 +113,6 @@
   border-radius: 19.5px
   transform: translateX(2px)
   transition: all 0.2s
-  z-index: 5
   box-sizing: border-box
   &:hover,
   &:focus
@@ -126,3 +128,104 @@
       &::before,
       &::after
         background-color: #000000
+
++respond-to(tablet)
+  .page-header
+    background-image: url("../img/header-bg-tablet@3x.jpg")
+    background-repeat: no-repeat
+    background-size: 100%
+    background-position: 86% 0
+    &::after
+      top: 7%
+      left: 5%
+      width: 886px
+      height: 630px
+      background-image: url("../img/header-pseudo-tablet@1x.png")
+      background-size: cover
+
+  +pixel-ratio(double)
+    .page-header
+      &::after
+        background-image: url("../img/header-pseudo-tablet@2x.png")
+
+  +pixel-ratio(triple)
+    .page-header
+      &::after
+        background-image: url("../img/header-pseudo-tablet@3x.png")
+
+  .page-header__wrapper
+    padding: 17px 59px 0
+
+  .logo
+    z-index: 1
+
+  .logo__img--mobile,
+  .logo__img--desktop
+    display: none
+
+  .logo__img--tablet
+    display: block
+    margin-right: 73px
+
+  .menu-burger
+    width: 23px
+    height: 22px
+    margin-top: 4px
+    span
+      margin-bottom: 6px
+      background-color: #ffffff
+      &::before
+        width: 14px
+        background-color: #ffffff
+
+      &::after
+        top: 14px
+        background-color: #ffffff
+
+  .page-header__topline-info
+    display: flex
+    padding-right: 1px
+    margin-bottom: 8px
+    font-weight: 700
+    line-height: 18.37px
+    a
+      text-decoration: none
+      +color-font(1, 1, 1, 0.87)
+
+  .page-header__intro-block
+    padding-top: 112px
+
+  .page-header__intro-title
+    margin-top: 0
+    margin-bottom: 42px
+    font-weight: 300
+    font-size: 48px
+    line-height: 1.2
+    letter-spacing: 0.075em
+
+  .page-header__intro-slogan
+    display: flex
+    padding-left: 2px
+    margin-top: 0
+    margin-bottom: 45px
+    font-weight: 300
+    font-size: 18px
+    line-height: 30.68px
+    letter-spacing: -0.2px
+    color: #ffffff
+
+  .page-header__intro-link
+    position: relative
+    width: 248px
+    padding: 14px 0
+    font-size: 14px
+    border-radius: 30px
+    &::after
+      +pseudo
+      top: 20px
+      left: 87%
+      width: 72px
+      height: 12px
+      background-image: url("../img/arrow-right.png")
+      background-repeat: no-repeat
+      background-size: cover
