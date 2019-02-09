@@ -185,3 +185,87 @@
     &:last-child
       padding-left: 24px
       margin-right: 0
+
++respond-to(desktop)
+  .schedule__wrapper
+    padding: 192px 38px 0 96px
+
+  .schedule__title
+    padding-left: 59px
+    margin-bottom: 73px
+    font-size: 48px
+    line-height: 30.03px
+    letter-spacing: -0.2px
+    +color-font(0, 0, 0, 0.87)
+    &::before
+      top: 15px
+      left: 4px
+
+  .schedule__content
+    padding: 0 4px
+    justify-content: flex-start
+
+  .schedule__content-item
+    width: 375px
+    max-height: 591px
+    padding: 172px 7px 95px 10px
+    margin-right: 20px
+    &::before
+      top: 4px
+      left: 31px
+      font-size: 210px
+
+    &:nth-child(2)
+      padding-left: 8px
+      margin-right: 19px
+      &::before
+        top: 3px
+        left: 12px
+
+    &:last-child
+      padding-left: 10px
+      &::before
+        top: 3px
+        left: 13px
+
+  .schedule__content-item-head
+    padding-left: 8px
+    margin-bottom: 19px
+    dt
+      margin-bottom: 15px
+      font-size: 14px
+      letter-spacing: 1.4px
+      span
+        font-size: 28px
+        letter-spacing: 2.8px
+
+    dd
+      font-size: 23.5px
+      letter-spacing: 0.2px
+
+  .schedule__content-item-main
+    td
+      font-size: 18px
+
+  .schedule__content-item-main
+    padding-left: 60px
+    margin-bottom: 26px
+    tr
+      margin-bottom: 12px
+
+    td
+      letter-spacing: 0
+      span
+        margin-right: 12px
+
+  .schedule__content-item-btn
+    width: 237px
+    padding: 15px 0
+    margin-left: 40px
+    font-size: 18.5px
+    border-radius: 30px
+    &::after
+      top: 20px
+      left: 200px
+      width: 69px
+      background-image: url("../img/arrow-right.png")

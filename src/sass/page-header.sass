@@ -19,6 +19,7 @@
     background-image: url("../img/header-pseudo@x1.png")
     background-repeat: no-repeat
     background-size: cover
+    z-index: 0
 
 +pixel-ratio(double)
   .page-header
@@ -29,9 +30,6 @@
   .page-header
     &::after
       background-image: url("../img/header-pseudo@x3.png")
-
-.main-menu
-  display: none
 
 .page-header__wrapper
   padding: 10px 15px 0
@@ -54,6 +52,7 @@
   border: none
   background-color: $bgc
   transform: translateY(-3px)
+  z-index: 1
   cursor: pointer
   span
     display: block
@@ -117,9 +116,6 @@
   &:hover,
   &:focus
     opacity: 0.8
-
-.nav__sidebar
-  display: none
 
 @media (min-width: 630px)
   .menu-burger
@@ -188,6 +184,7 @@
     margin-bottom: 8px
     font-weight: 700
     line-height: 18.37px
+    z-index: 1
     a
       text-decoration: none
       +color-font(1, 1, 1, 0.87)
@@ -229,3 +226,53 @@
       background-image: url("../img/arrow-right.png")
       background-repeat: no-repeat
       background-size: cover
+
++respond-to(desktop)
+  .page-header
+    background-image: url("../img/header-bg-desktop@1x.jpg")
+    background-position: -5px -5px
+    background-size: 102%
+    &::after
+      top: 31px
+      left: 372px
+      width: 1092px
+      height: 776px
+      background-image: url("../img/header-pseudo-desktop@1x.png")
+
+  +pixel-ratio(double)
+    .page-header
+      background-image: url("../img/header-bg-desktop@2x.jpg")
+      &::after
+        background-image: url("../img/header-pseudo-desktop@2x.png")
+
+  +pixel-ratio(triple)
+    .page-header
+      background-image: url("../img/header-bg-desktop@3x.jpg")
+      &::after
+        background-image: url("../img/header-pseudo-desktop@3x.png")
+
+  .page-header__wrapper
+    padding: 22px 38px 81px 96px
+
+  .page-header__topline
+    padding-right: 62px
+
+  .logo__img--mobile,
+  .logo__img--tablet
+    display: none
+
+  .logo__img--desktop
+    display: block
+    margin-right: 20px
+
+  .menu-burger
+    margin-top: 13px
+
+  .page-header__topline-info
+    margin-top: 5px
+
+  .page-header__intro-title
+    padding: 3px 0 0 3px
+    margin-bottom: 20px
+    font-size: 58px
+

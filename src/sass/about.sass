@@ -133,3 +133,51 @@
     padding-right: 16px
     font-size: 14.01px
     letter-spacing: 1.8px
+
++respond-to(desktop)
+  .about__wrapper
+    padding: 108px 38px 330px 96px
+    &::after
+      bottom: 5px
+      right: 103px
+      width: 855px
+      height: 630px
+      background-image: url("../img/about-img-desktop@1x.png")
+
+  +pixel-ratio(double)
+    .about__wrapper
+      &::after
+        background-image: url("../img/about-img-desktop@2x.png")
+
+  +pixel-ratio(triple)
+    .about__wrapper
+      &::after
+        background-image: url("../img/about-img-desktop@3x.png")
+
+  .about__title
+    padding-left: 59px
+    margin-bottom: 64px
+    font-size: 48px
+    line-height: 30.03px
+    letter-spacing: normal
+    +color-font(0, 0, 0, 0.87)
+    &::before
+      top: 15px
+      left: 4px
+
+  .about__text
+    padding-left: 4px
+
+  .about__text
+    &:first-of-type
+      width: 317px
+      margin-bottom: 26px
+      line-height: 24.01px
+
+    &:last-of-type
+      width: 389px
+      line-height: 24.01px
+      margin-bottom: 30px
+
+  .about__link
+    padding-left: 3px

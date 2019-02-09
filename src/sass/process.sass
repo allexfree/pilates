@@ -225,6 +225,45 @@
       h3
         padding-bottom: 23px
 
+  +pixel-ratio(double)
+    .process__content-item
+      &::before
+        background-size: contain
+
+      &:first-child
+        &::before
+          background-image: url("../img/process-pseudo-1-tablet@2x.png")
+
+      &:nth-child(2)
+        &::before
+          background-image: url("../img/process-pseudo-2-tablet@2x.png")
+
+      &:nth-child(3)
+        &::before
+          background-image: url("../img/process-pseudo-3-tablet@2x.png")
+
+      &:last-child
+        &::before
+          background-image: url("../img/process-pseudo-4-tablet@2x.png")
+
+  +pixel-ratio(triple)
+    .process__content-item
+      &:first-child
+        &::before
+          background-image: url("../img/process-pseudo-1-tablet@3x.png")
+
+      &:nth-child(2)
+        &::before
+          background-image: url("../img/process-pseudo-2-tablet@3x.png")
+
+      &:nth-child(3)
+        &::before
+          background-image: url("../img/process-pseudo-3-tablet@3x.png")
+
+      &:last-child
+        &::before
+          background-image: url("../img/process-pseudo-4-tablet@3x.png")
+
   .process__content-item-title
     padding-bottom: 24px
     font-family: $font-two
@@ -236,3 +275,120 @@
     font-size: 16px
     +color-font(1, 1, 1, 0.87)
     text-align: left
+
++respond-to(desktop)
+  .process__wrapper
+    padding: 117px 38px 313px 96px
+
+  .process__title
+    padding-left: 59px
+    margin-bottom: 73px
+    font-size: 48px
+    line-height: 30.03px
+    letter-spacing: -0.2px
+    +color-font(0, 0, 0, 0.87)
+    &::before
+      top: 20px
+      left: 5px
+
+  .process__content
+    padding: 114px 0 0 45px
+
+  .process__content-item
+    &:first-child
+      margin-bottom: 347px
+      &::before
+        top: -239px
+        right: 229px
+        width: 423px
+        height: 548px
+        background-image: url("../img/process-pseudo-1-desktop@1x.png")
+
+    &:nth-child(2)
+      padding-left: 651px
+      margin-bottom: 368px
+      .process__content-item-title
+        padding-bottom: 13px
+
+      .process__content-item-text
+        padding-left: 2px
+
+      &::before
+        top: -280px
+        left: 71px
+        width: 462px
+        height: 650px
+        background-image: url("../img/process-pseudo-2-desktop@1x.png")
+
+    &:nth-child(3)
+      padding-left: 52px
+      margin-bottom: 384px
+      .process__content-item-title
+        padding-bottom: 13px
+
+      &::before
+        top: -80px
+        right: 218px
+        width: 496px
+        height: 417px
+        background-image: url("../img/process-pseudo-3-desktop@1x.png")
+
+    &:last-child
+      padding-left: 688px
+      .process__content-item-title
+        padding-bottom: 13px
+
+      &::before
+        top: -111px
+        left: 1px
+        width: 671px
+        height: 482px
+        background-image: url("../img/process-pseudo-4-desktop@1x.png")
+
+  +pixel-ratio(double)
+    .process__content-item
+      &::before
+        background-size: contain
+
+      &:first-child
+        &::before
+          background-image: url("../img/process-pseudo-1-desktop@2x.png")
+
+      &:nth-child(2)
+        &::before
+          background-image: url("../img/process-pseudo-2-desktop@2x.png")
+
+      &:nth-child(3)
+        &::before
+          background-image: url("../img/process-pseudo-3-desktop@2x.png")
+
+      &:last-child
+        &::before
+          background-image: url("../img/process-pseudo-4-desktop@2x.png")
+
+  +pixel-ratio(triple)
+    .process__content-item
+      &:first-child
+        &::before
+          background-image: url("../img/process-pseudo-1-desktop@3x.png")
+
+      &:nth-child(2)
+        &::before
+          background-image: url("../img/process-pseudo-2-desktop@3x.png")
+
+      &:nth-child(3)
+        &::before
+          background-image: url("../img/process-pseudo-3-desktop@3x.png")
+
+      &:last-child
+        &::before
+          background-image: url("../img//process-pseudo-4-desktop@3x.png")
+
+  .process__content-item-title
+    padding-bottom: 18px
+    font-size: 28px
+    letter-spacing: -0.2px
+
+  .process__content-item-text
+    width: 383px
+    line-height: 23.97px

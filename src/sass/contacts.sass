@@ -148,9 +148,66 @@
     background-position: 5%
 
   +pixel-ratio(double)
-  .contacts__map
-    background-image: url("../img/map-tablet@2x.png")
+    .contacts__map
+      background-image: url("../img/map-tablet@2x.png")
 
   +pixel-ratio(triple)
     .contacts__map
       background-image: url("../img/map-tablet@3x.png")
+
++respond-to(desktop)
+  .contacts
+    padding: 142px 0 0
+
+  .contacts__title
+    padding-left: 156px
+    margin-bottom: 73px
+    font-size: 48px
+    line-height: 30.03px
+    letter-spacing: -0.5px
+    +color-font(0, 0, 0, 0.87)
+    &::before
+      top: 16px
+      left: 100px
+
+  .contacts__content
+    height: 513px
+
+  .contacts__info
+    left: 100px
+    padding: 42px 75px 73px 68px
+
+  .contacts__info-address
+    margin-bottom: 24px
+    span
+      font-weight: 300
+      font-size: 16.5px
+      letter-spacing: -0.5px
+
+  .contacts__info-phone
+    margin-bottom: 18px
+
+  .contacts__info-address-title,
+  .contacts__info-phone-tile,
+  .contacts__info-mail-tile
+    margin-bottom: 9px
+    font-size: 16.5px
+
+  .contacts__info-mail-tile
+    margin-bottom: 7px
+
+  .contacts__info-phone-link,
+  .contacts__info-mail-link
+    letter-spacing: -0.2px
+
+  .contacts__map
+    height: 100%
+    background-image: url('../img/map-desktop@1x.png')
+
+  +pixel-ratio(double)
+    .contacts__map
+      background-image: url("../img/map-desktop@2x.png")
+
+  +pixel-ratio(triple)
+    .contacts__map
+      background-image: url("../img/map-desktop@3x.png")
