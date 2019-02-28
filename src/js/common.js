@@ -2,8 +2,9 @@
 
 $(document).ready(function () {
 
+  //menu
+
   $(window).resize(function() {
-    console.log($('.page-header').height());
     $('.main-menu').css('display', 'none');
     $('.main-menu').css('opacity', '0');
   });
@@ -38,6 +39,35 @@ $(document).ready(function () {
     scrollTop: $(this.hash).offset().top
     }, 1000);
   })
+
+
+  //popups
+
+  $('.schedule__content-item-btn').click(function() {
+    $('.popups-overlay').css('display', 'flex');
+    $('.pre-entry-popup').css('display', 'flex');
+  });
+
+  $('#close-pre-entry-popup').click(function() {
+    $('.popups-overlay').css('display', '');
+    $('.pre-entry-popup').css('display', '');
+    $('.pre-entry-popup__form input').val('');
+    $('#user-confirm').prop('checked', false);
+    if ($('#pre-entry-form-submit').attr('disabled') === undefined) {
+      $('#pre-entry-form-submit').attr('disabled', '')
+    }
+  });
+
+  $('#user-confirm').click(function() {
+    if ($(this).prop('checked')) {
+      $('#pre-entry-form-submit').removeAttr('disabled')
+    } else {
+      $('#pre-entry-form-submit').attr('disabled', '')
+    }
+  });
+
+
+  //slider
 
   $('.reviews__slider').slick({
     mobileFirst: true,

@@ -400,6 +400,34 @@
     </div>
   </footer>
 
+  <div class="popups-overlay">
+    <div class="pre-entry-popup">
+      <div class="pre-entry-popup__wrapper">
+        <p class="pre-entry-popup__caption">Хочешь записаться на занятие</p>
+        <p class="pre-entry-popup__text">Оставьте контакты и наши менеджеры свяжуться в ближайшее время</p>
+        <form class="pre-entry-popup__form" action="#" method="POST">
+          <fieldset class="pre-entry-popup__form-group">
+            <div class="pre-entry-popup__form-wrapper">
+              <input class="pre-entry-popup__form-input" type="tel" name="телефон" placeholder="Телефон" required>
+              <input class="pre-entry-popup__form-input" type="text" name="имя" placeholder="Имя">
+              <input class="pre-entry-popup__form-input" type="mail" name="мэйл" placeholder="E-mail" required>
+            </div>
+          </fieldset>
+          <div class="pre-entry-popup__form-footer">
+            <input id="user-confirm" class="pre-entry-popup__form-checkbox" type="checkbox" name="check">
+            <label class="pre-entry-popup__form-label" for="user-confirm">Я согласен на обработку персональных данных</label>
+            <button id="pre-entry-form-submit" class="pre-entry-popup__form-btn-submit" type="submit" disabled>Записаться</button>
+          </div>
+        </form>
+        <button id="close-pre-entry-popup" class="btn-close" type="button" aria-label="Закрыть окно"></button>
+      </div>
+    </div>
+
+    <div class="map-popup" hidden>
+
+    </div>
+  </div>
+
   <link rel="stylesheet" href="libs/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 
